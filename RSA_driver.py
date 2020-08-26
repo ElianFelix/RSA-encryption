@@ -34,10 +34,11 @@ if __name__ == "__main__":
     e, n = kpub
     plaintxt = random.randrange(1, n)
     cipher = RSA_crypto.rsa_encrypt(plaintxt, e, n)
+    range
     d = kpr[0]
     cipher_de = RSA_crypto.rsa_decrypt(cipher, d, n)
 
-    # print('\n', kpub, '\n', kpr, '\n')
+    print('\n', kpub, '\n', kpr, '\n')
 
     print('Our plaintext(in hex): ')
     display_hex(plaintxt)
