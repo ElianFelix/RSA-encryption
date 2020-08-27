@@ -70,9 +70,11 @@ def eucl_aex(n1, n2, s0=1, s1=0, t0=0, t1=1):
         raise ValueError('Invalid input: first parameter needs to be a bigger value than the second.')
     while n2 != 0:
         n3 = n1 % n2
-        q = (n1 - n3) // n2
+        q, n2, n1 = (n1 - n3) // n2, n3, n2
         s2 = s0 - q * s1
         t2 = t0 - q * t1
+        s0, s1 = s1, s2
+        t0, t1 = t1, t2
 
     return n1, s0, t0
 
